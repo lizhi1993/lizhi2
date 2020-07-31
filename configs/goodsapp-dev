@@ -4,29 +4,8 @@ spring:
       host: localhost
       port: 8500
       discovery:
-        service-name: gatewayservice
-        instance-id: gateway
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      routes:
-        - id: user
-          uri: lb://usersservice
-          predicates:
-            - Path=/users/**
-        - id: good
-          uri: lb://goodsservice
-          predicates:
-            - Path=/goods/**
-        - id: order
-          uri: lb://ordersservice
-          predicates:
-            - Path=/orderfeign/**
-  redis:
-    port: 6379
-    host: localhost
-
+        service-name: goodsservice
 server:
-  port: 11000
+  port: 8888
+
+
