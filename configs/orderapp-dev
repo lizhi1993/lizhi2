@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ordersservice
+server:
+  port: 9999
+feign:
+  hystrix:
+    enabled: true
